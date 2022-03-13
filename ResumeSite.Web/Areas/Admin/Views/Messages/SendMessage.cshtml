@@ -1,0 +1,43 @@
+﻿@model SendMessageViewModel
+
+@{
+    ViewData["Title"] = "ارسال پاسخ";
+}
+
+<div>
+    <h4>پیام</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+    </dl>
+</div>
+<div class="container">
+    <form class="col-10" method="post">
+        <label asp-for="AnswerText"></label>
+
+        <input asp-for="UserName" type="hidden"/>
+        <input asp-for="Email" type="hidden"/>
+        <input asp-for="Text" type="hidden"/>
+
+        <textarea asp-for="AnswerText" class="form-control"></textarea>
+
+        <input type="submit" value="پاسخ" class="btn btn-warning" />
+    </form>
+</div>

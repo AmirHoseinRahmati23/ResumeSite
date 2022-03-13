@@ -1,0 +1,54 @@
+﻿@model HomePageViewModel
+
+@{
+    ViewData["Title"] = "خانه";
+}
+
+
+<section class="userBody">
+
+    <div class="aboutBox">
+        <h2 class="aboutHead">درباره من</h2>
+        <p class="aboutPara">@Model.About.AboutMe</p>
+
+    </div>
+
+    @foreach (var item in Model.AbilityLists)
+    {
+        <div class="aboutBox">
+            <h2 class="aboutHead">@item.Name </h2>
+            <ul class="personal-info-list">
+                @foreach (var ability in item.Abilities)
+                {
+                    if (item.HaveImage)
+                    {
+                        <li class="personal-info"> <a href="~/AbilityImages/@(ability.ImageName)">@ability.Text</a></li>
+                    }
+                    else
+                    {
+                        <li class="personal-info">@ability.Text</li>
+                    }
+                }
+            </ul>
+        </div>
+    }
+
+    <div class="aboutBox">
+        <h2 class="aboutHead">
+            تماس با من
+        </h2>
+        <ul class="personal-info-list">
+            <li class="personal-info">آدرس : @Model.About.Address</li>
+            <li class="personal-info">تلفن : @Model.About.Telephon</li>
+            <li class="personal-info">موبایل :  @Model.About.Mobile</li>
+            <li class="personal-info">ایمیل : @Model.About.Email</li>
+        </ul>
+
+        <form asp-action="AddMessage" method="post">
+            <input placeholder="نام" name="userName" type="text" class="input-name">
+            <input placeholder="ایمیل" name="email" type="text" class="input-email">
+            <textarea placeholder="متن" name="text" type="text" class="input-text"></textarea>
+            <input type="submit" value="ارسال" class="form-btn" />
+        </form>
+    </div>
+</section>

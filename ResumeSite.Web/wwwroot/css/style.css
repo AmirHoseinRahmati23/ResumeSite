@@ -1,0 +1,272 @@
+/*  ALL  */
+@font-face{
+    src : url(/font/Vazir.ttf);
+    font-family: Vazir;
+}
+*{
+    margin: auto;
+    font-family: Vazir;
+}
+h1,h2,h3,h4,h5,h6,p , li{
+    color: #dddddd;
+}
+body{
+    direction: rtl;
+    background-color: #111111;
+}
+a{
+    text-decoration: none;
+}
+button:focus{
+    outline: none;
+}
+input:focus , textarea:focus{
+    outline: none;
+    border: 1px solid #bbbbbb;
+    background-color: #dddddd;
+}
+input , textarea{
+    border: 1px solid #bbbbbb;
+    border-radius: 10px;
+    padding: 10px;
+}
+.textBlack{
+    color : rgb(22, 22, 22);
+}
+.textGray{
+    color : rgb(49, 49, 49);
+}
+.textGreen{
+    color:  rgb(30, 189, 154);
+}
+.backGreen{
+    background-color: #35d67e;
+}
+.txtCenter{
+    text-align: center;
+}
+.container{
+    margin: 0px 70px;
+    display: flex;
+}
+/*  ALL  */
+
+/* Right Section */
+.userIntroduction{
+    background-color: transparent;
+    box-shadow: 0px 0px 6px #dddddd;
+    width: 20%;
+    margin-top: 84px;
+    border-radius: 5px;
+    position: fixed;
+    z-index : 1;
+}
+.userImageBox{
+    box-shadow: 0px 1px 6px #dddddd;
+    padding: 4px;
+    width: 96%;
+    border-radius: 5px;
+}
+.userImg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 0px 10px #dddddd65;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    display: block;
+}
+.socialMedia{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+}
+.socialImg{
+    width: 20px;
+    height: 20px;
+}
+.resumeCTA{
+    padding: 20px;
+}
+.resumeButton{
+    border: none;
+    display: block;
+    text-align: center;
+    padding: 7px 24px;
+    border-radius: 10px;
+}
+.resumeButton:hover {
+    background-color: #28b16c;
+}
+.resumeLink{
+    color: rgb(22, 22, 22);
+}
+/* Right Section */
+
+/* Left Section */
+
+.userBody {
+    width: 75%;
+    margin: 30px 26% 0px 0px;
+    z-index: 1;
+}
+
+.aboutBox {
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 30px;
+    box-shadow: 0px 0px 8px #dddddd;
+    border-radius: 5px;
+}
+.aboutHead{
+    font-size: 25px;
+    margin-top: 20px;
+    position: relative;
+}
+.aboutHead::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    width: 10px;
+    height: 40px;
+    background-color: #478ed1;
+    border-radius: 20px;
+}
+.aboutPara{
+    font-size: 17px;
+    margin-bottom: 50px;
+    text-justify: distribute-all-lines;
+    line-height: 27px;
+    margin-top: 10px;
+}
+.abilityBox{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.infoPerson{
+    width: 280%;
+}
+
+/* Left Section */
+
+.personal-info-list{
+    padding: 10px;
+    margin-right: 20px;
+}
+.personal-info{
+    list-style: none;
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.personal-info::before{
+    font-size: 30px;
+    position: absolute;
+    right: -12px;
+    top: -7.5px;
+    content: "•";
+    color: #478ed1;
+}
+.personal-info > a{
+    color: #dddddd;
+    text-decoration: none;
+}
+.personal-info > a:hover{
+    color: #478ed1;
+}
+
+form{
+    width: 60%;
+}
+.input-email{
+    margin-right: 0.7%;
+}
+.input-name , .input-email{
+    width: 49%;
+    height: 30px;
+}
+.input-username{
+    width : 99%;
+    height : 30px;
+    margin-bottom : 10px;
+}
+.input-text{
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+}
+.form-btn:focus{
+    outline: none;
+    border: none;
+}
+.form-btn{
+    border: 2px solid transparent;
+    background-color: #478ed1;
+    height: 40px;
+    margin-top: 20px;
+    color: snow;
+    width: 25%;
+    display: block;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+.form-btn:hover{
+    background-color: #4760d1;
+    border: 2px solid #478ed1;
+}
+
+@media only screen and (max-width:1000px){
+    .input-name , .input-email{
+        width: 100%;
+        margin: 2px 0px 2px 0px;
+        height: 30px;
+    }
+
+    .userIntroduction{
+        width: 30%;
+    }
+    .userBody{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:800px){
+    
+    .container{
+        flex-flow: column nowrap;
+        margin: 0px 40px;
+    }
+    .userIntroduction{
+        width: 75%;
+    }
+    .userImageBox{
+        width: 50%;
+        margin-top: 20px;
+    }
+    .userBody{
+        width: 80%;
+    }
+    
+}
+@media only screen and (max-width:550px){
+
+    .container{
+        margin: 0px 0px;
+    }
+    form{
+        width: 80%;
+    }
+
+}
+
+
+.particles-js-canvas-el{
+    opacity: 0.5;
+    position: fixed;
+    display: block;
+    height: 100%;
+    z-index : 0;
+}

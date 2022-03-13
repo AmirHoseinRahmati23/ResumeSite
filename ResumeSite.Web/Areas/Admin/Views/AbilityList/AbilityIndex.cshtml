@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Ability>
+
+@{
+    ViewData["Title"] = "زیر مجموعه ها";
+}
+
+<h2>زیر مجموعه ها</h2>
+
+<p>
+    <a asp-route-id="@ViewBag.ListId" asp-action="AddAbility">افزودن</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                <a asp-action="EditAbility" asp-route-id="@item.Id">ویرایش</a> |
+                <form method="Post" asp-action="DeleteAbility">
+                    <input value="@item.Id" type="hidden" name="id" />
+                    <input type="submit" value="حذف" />
+                </form> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

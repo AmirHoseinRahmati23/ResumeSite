@@ -1,0 +1,25 @@
+﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "ورود";
+}
+
+<section class="userBody">
+
+    <div class="aboutBox">
+        <h2 class="aboutHead">
+            ورود
+        </h2>
+
+        <form asp-action="Login" method="post">
+            <input placeholder="نام کاربری" asp-for="UserName" type="text" class="input-username">
+            <input placeholder="رمز عبور" asp-for="Password" type="password" class="input-name">
+            <input placeholder="رمز عبور دوم" asp-for="SecoundPassword" type="password" class="input-name" />
+            <input type="checkbox" asp-for="RememberMe" /> <label style="color : snow; margin-top : 10px;"> مرا به خاطر بسپار </label>
+            <input type="submit" value="ارسال" class="form-btn" />
+        </form>
+    </div>
+
+
+
+</section>

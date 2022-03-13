@@ -1,0 +1,9 @@
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\bin\Debug\netcoreapp3.1\ResumeSite.Data.deps.json
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\bin\Debug\netcoreapp3.1\ResumeSite.Data.dll
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\bin\Debug\netcoreapp3.1\ResumeSite.Data.pdb
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\obj\Debug\netcoreapp3.1\ResumeSite.Data.csprojAssemblyReference.cache
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\obj\Debug\netcoreapp3.1\ResumeSite.Data.AssemblyInfoInputs.cache
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\obj\Debug\netcoreapp3.1\ResumeSite.Data.AssemblyInfo.cs
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\obj\Debug\netcoreapp3.1\ResumeSite.Data.csproj.CoreCompileInputs.cache
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\obj\Debug\netcoreapp3.1\ResumeSite.Data.dll
+D:\Asp.netCore\ResumeSite\ResumeSite.Data\obj\Debug\netcoreapp3.1\ResumeSite.Data.pdb

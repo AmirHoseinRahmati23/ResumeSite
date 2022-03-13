@@ -1,0 +1,78 @@
+﻿@model PersonalInfo
+
+@{
+    ViewData["Title"] = "اطلاعات شخصی";
+}
+
+
+<div>
+    <h4>اطلاعات شخصی</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <dd class="col-10 col-sm-12">
+                <img class="w-25" src="~/AdminImage/@(Model.Image)" />
+            </dd>
+        }
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Work)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Work)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Instagram)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Instagram)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telegram)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telegram)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Linkedin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Linkedin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Twitter)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Twitter)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ResumeFile)
+        </dt>
+        @if (!string.IsNullOrEmpty(Model.ResumeFile))
+        {
+            <dd class="col-sm-10">
+                <a download href="~/ResumeFile/@(Model.ResumeFile)" class="btn btn-info">دانلود رزومه</a>
+            </dd>
+        }
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit">ویرایش</a>
+</div>

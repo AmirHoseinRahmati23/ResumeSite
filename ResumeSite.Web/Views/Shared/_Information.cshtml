@@ -1,0 +1,36 @@
+﻿@inject IDatabaseRepository database;
+
+@{ 
+    var info = await database.GetPersonalInfoAsync();
+}
+
+<section class="userIntroduction">
+    <div class="userInfo">
+        <div class="userImageBox">
+            <img src="~/AdminImage/@(info.Image)" alt="" class="userImg">
+            <h1 class="txtCenter">@info.Name</h1>
+            <p class="txtCenter"> <a class="textGreen">@info.Work</a> در @info.City</p>
+        </div>
+        <div>
+            <div class="socialMedia">
+                <a href="@info.Linkedin">
+                    <img class="socialImg" src="~/images/linkedin.png" alt="">
+                </a>
+                <a href="@info.Twitter">
+                    <img class="socialImg" src="~/images/twitter.png" alt="">
+                </a>
+                <a href="@info.Telegram">
+                    <img class="socialImg" src="~/images/whatsapp.png" alt="">
+                </a>
+                <a href="@info.Instagram">
+                    <img class="socialImg" src="~/images/instagram.png" alt="">
+                </a>
+            </div>
+            <div class="resumeCTA">
+                <button class="resumeButton backGreen">
+                    <a download class="resumeLink" href="~/ResumeFile/@(info.ResumeFile)">دانلود رزومه</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
